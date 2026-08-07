@@ -1,0 +1,790 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+
+
+body{
+
+background:url("");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+
+color:white;
+overflow-x:hidden;
+
+}
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:url("fond d'ecran ada 9 16.jpg");
+
+background-size:cover;
+background-position:center;
+
+filter:blur(12px);
+
+transform:scale(1.1);
+
+z-index:-2;
+
+}
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,.45);
+
+z-index:-1;
+
+}
+
+header{
+
+height:90px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 8%;
+position:absolute;
+width:100%;
+z-index:10;
+
+}
+
+
+
+.logo{
+
+font-size:28px;
+font-weight:700;
+letter-spacing:6px;
+
+}
+
+
+
+nav a{
+
+color:white;
+text-decoration:none;
+margin-left:35px;
+opacity:.6;
+transition:.3s;
+
+}
+
+
+nav a:hover{
+
+opacity:1;
+
+}
+
+
+
+/* HERO */
+
+
+.hero{
+
+height:100vh;
+
+display:flex;
+align-items:center;
+
+padding:0 8%;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+
+
+.hero-content{
+
+z-index:2;
+
+animation:appear 1.5s ease;
+
+}
+
+
+
+h1{
+
+font-size:90px;
+line-height:.95;
+letter-spacing:-5px;
+
+}
+
+
+
+p{
+
+font-size:22px;
+opacity:.6;
+margin-top:30px;
+max-width:500px;
+
+}
+
+
+
+.buttons{
+
+margin-top:45px;
+
+}
+
+
+
+button{
+
+padding:18px 40px;
+
+border-radius:40px;
+
+border:none;
+
+font-size:16px;
+
+cursor:pointer;
+
+background:white;
+
+transition:.4s;
+
+}
+
+
+
+button:hover{
+
+transform:scale(1.08);
+
+}
+
+
+
+.second{
+
+background:#222;
+color:white;
+margin-left:15px;
+
+}
+
+
+
+/* IMAGE FLOTTANTE */
+
+
+.floating-card{
+
+position:absolute;
+
+right:8%;
+
+width:420px;
+
+height:600px;
+
+border-radius:40px;
+
+overflow:hidden;
+
+animation:float 6s infinite ease-in-out;
+
+}
+
+
+
+.floating-card img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+
+}
+
+
+
+/* SHOWCASE */
+
+
+.showcase{
+
+padding:150px 8%;
+text-align:center;
+
+}
+
+
+
+.showcase h2{
+
+font-size:70px;
+letter-spacing:-3px;
+
+}
+
+
+
+
+
+.box{
+
+margin-top:80px;
+
+height:700px;
+
+border-radius:50px;
+
+overflow:hidden;
+
+}
+
+
+
+
+.box img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+
+}
+
+
+
+/* FIN */
+
+
+.final{
+
+height:80vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+
+
+.final h2{
+
+font-size:60px;
+
+margin-bottom:40px;
+
+}
+
+
+
+/* ANIMATIONS */
+
+
+@keyframes appear{
+
+from{
+
+opacity:0;
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+
+
+@keyframes float{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-30px);
+
+}
+
+}
+.contact-hero{
+
+    height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("Capture d'écran 2026-08-07 031521.png");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.contact-box{
+
+    background:rgba(0,0,0,0.45);
+
+    backdrop-filter:blur(10px);
+
+    padding:60px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    color:white;
+
+    width:500px;
+
+}
+
+.contact-box h1{
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+}
+
+.contact-box p{
+
+    margin-bottom:30px;
+
+    font-size:20px;
+
+}
+
+.contact-box button{
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+}
+.projets{
+
+padding:120px 8%;
+
+}
+
+.projets h1{
+
+text-align:center;
+font-size:60px;
+margin-bottom:60px;
+
+}
+
+.grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:30px;
+
+}
+
+.grid img,
+.grid video{
+
+width:100%;
+height:400px;
+
+object-fit:cover;
+
+border-radius:25px;
+
+transition:0.4s;
+
+}
+
+.grid img:hover,
+.grid video:hover{
+
+transform:scale(1.03);
+
+}
+.projet{
+
+position:relative;
+width:100%;
+
+}
+
+.slider-image{
+
+width:100%;
+height:400px;
+object-fit:cover;
+border-radius:25px;
+
+}
+
+.prev,
+.next{
+
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+
+background:rgba(0,0,0,.5);
+color:white;
+
+border:none;
+
+width:45px;
+height:45px;
+
+border-radius:50%;
+
+cursor:pointer;
+
+}
+
+.prev{
+
+left:15px;
+
+}
+
+.next{
+
+right:15px;
+
+}
+html{
+
+scroll-behavior:smooth;
+
+}
+.button,
+.second{
+
+display:inline-block;
+
+padding:18px 40px;
+
+border-radius:40px;
+
+text-decoration:none;
+
+font-size:16px;
+
+transition:.4s;
+
+cursor:pointer;
+
+}
+
+.button{
+
+background:white;
+
+color:black;
+
+}
+
+.second{
+
+background:#222;
+
+color:white;
+
+margin-left:15px;
+
+}
+
+.button:hover,
+.second:hover{
+
+transform:scale(1.08);
+
+}
+/* IMAGES DU BAS ACCUEIL */
+
+.gallery{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+
+width:75%;
+margin:60px auto;
+
+}
+
+
+.gallery img{
+
+width:100%;
+height:300px;
+
+object-fit:cover;
+
+border-radius:35px;
+
+transition:0.4s;
+
+}
+
+
+.gallery img:hover{
+
+transform:scale(1.03);
+
+}
+/* ========================= */
+/* PAGE PROJETS */
+/* ========================= */
+
+.projets{
+
+    padding:140px 8% 100px;
+
+}
+
+.projets h1{
+
+    text-align:center;
+    font-size:70px;
+    margin-bottom:20px;
+    letter-spacing:-3px;
+
+}
+
+.subtitle{
+
+    text-align:center;
+    opacity:.6;
+    max-width:800px;
+    margin:0 auto 80px;
+
+}
+
+/* ========================= */
+/* CARTE PROJET */
+/* ========================= */
+
+.projet{
+
+    background:#111;
+
+    border-radius:35px;
+
+    padding:35px;
+
+    margin-bottom:60px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+
+}
+
+.projet h2{
+
+    font-size:34px;
+
+    margin-bottom:30px;
+
+}
+
+/* ========================= */
+/* SLIDER */
+/* ========================= */
+
+.slider{
+
+    position:relative;
+
+    width:100%;
+
+}
+
+.slider-image{
+
+    width:100%;
+
+    height:650px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    transition:.4s;
+
+}
+
+/* ========================= */
+/* FLECHES */
+/* ========================= */
+
+.prev,
+.next{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(0,0,0,.45);
+
+    color:white;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    backdrop-filter:blur(10px);
+
+}
+
+.prev{
+
+    left:20px;
+
+}
+
+.next{
+
+    right:20px;
+
+}
+
+.prev:hover,
+.next:hover{
+
+    background:white;
+
+    color:rgb(127, 71, 133);
+
+    transform:translateY(-50%) scale(1.1);
+
+}
+
+/* ========================= */
+/* VIDEO */
+/* ========================= */
+
+.video-card{
+
+    background:#111;
+
+    border-radius:35px;
+
+    padding:35px;
+
+    margin-bottom:60px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+
+}
+
+.video-card h2{
+
+    margin-bottom:30px;
+
+    font-size:34px;
+
+}
+
+.video-card video{
+
+    width:100%;
+
+    border-radius:25px;
+
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:900px){
+
+.projets h1{
+
+    font-size:50px;
+
+}
+
+.slider-image{
+
+    height:400px;
+
+}
+
+.prev,
+.next{
+
+    width:45px;
+    height:45px;
+
+}
+
+}
